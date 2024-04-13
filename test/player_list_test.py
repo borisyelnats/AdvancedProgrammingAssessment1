@@ -7,9 +7,9 @@ import player_node
 
 class player_test(unittest.TestCase):
     
-
+    #tests if the head key matches the right keuy
     def test_full(self):
-        #set up the list which contains elements
+        
         A = player.player(1, "Aaron")
         B = player.player(2, "Ben")
 
@@ -22,7 +22,7 @@ class player_test(unittest.TestCase):
 
         self.assertEqual(List_Full.get_head.key, 2)
 
-
+    #tests if the head key matches the right key with insertion on an empty list
     def test_empty(self):
         #setup the list which is empty
         List_Empty = player_list.PlayerList()
@@ -32,6 +32,7 @@ class player_test(unittest.TestCase):
 
         self.assertEqual(List_Empty.get_head.key, 1)
     
+    #tests if that tail property returns the correct value for empty, 1 and 2 entried list
     def test_tail(self):
         An = player_node.Player_node(player.player(1, "Aaron"))
         Bn = player_node.Player_node(player.player(2, "Ben"))
@@ -43,6 +44,19 @@ class player_test(unittest.TestCase):
         self.assertEqual(List_Tail.get_tail.key, 1)
         List_Tail.insert_node(Bn)
         self.assertEqual(List_Tail.get_tail.key, 1)
+    
+    #tests if the tail updates when the insert at tail function is used
+    def test_insert_at_tail(self):
+        An = player_node.Player_node(player.player(1, "Aaron"))
+        Bn = player_node.Player_node(player.player(2, "Ben"))
+        List_Tail = player_list.PlayerList()
+        List_Tail.insert_node(An)
+        self.assertEqual(List_Tail.get_tail.key, 1)
+        List_Tail.insert_at_tail(Bn)
+        self.assertEqual(List_Tail.get_tail.key, 2)
+
+
+
 
 
     
