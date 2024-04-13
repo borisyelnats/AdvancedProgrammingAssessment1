@@ -31,4 +31,18 @@ class player_test(unittest.TestCase):
         List_Empty.insert_node(An)
 
         self.assertEqual(List_Empty.get_head.key, 1)
-        #self.
+    
+    def test_tail(self):
+        An = player_node.Player_node(player.player(1, "Aaron"))
+        Bn = player_node.Player_node(player.player(2, "Ben"))
+      
+    
+        List_Tail = player_list.PlayerList()
+        self.assertIsNone(List_Tail.get_tail)
+        List_Tail.insert_node(An)
+        self.assertEqual(List_Tail.get_tail.key, 1)
+        List_Tail.insert_node(Bn)
+        self.assertEqual(List_Tail.get_tail.key, 1)
+
+
+    
