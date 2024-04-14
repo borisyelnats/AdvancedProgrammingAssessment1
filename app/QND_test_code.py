@@ -1,28 +1,20 @@
+import sys
+sys.path.append("/Users/benjamincooper/Documents/TAFE/advanced programming/AP_ass1/SRUS-BJC-Games/app")
 import player
 import player_list
 import player_node
-
-A = player.player(1, "Aaron")
-B = player.player(2, "Ben")
-C = player.player(3, "Charles")
-
-An = player_node.Player_node(A)
-Bn = player_node.Player_node(B)
-Cn = player_node.Player_node(C)
+import argon2
+hasher = argon2.PasswordHasher()
 
 
-List = player_list.PlayerList()
-List.insert_node(An)
-#print(List.get_tail.key)
+player1 = player.player(1, "A")
 
-List.insert_node(Bn)
-List.insert_node(Cn)
-List.display()
-List.display(forward=0)
-'''
-print(List.get_tail.key)
-List.insert_at_tail(Cn)
-print(List.get_tail.key)
-List.delete_tail()
-print(List.get_tail.key)
-'''
+
+player1.add_password("TEST PASSWORD")
+
+print(player1.verify_password("TEST PASSWORD"))
+
+
+
+
+
