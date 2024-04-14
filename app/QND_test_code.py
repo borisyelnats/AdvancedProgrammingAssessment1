@@ -10,16 +10,19 @@ An = player_node.Player_node(A)
 Bn = player_node.Player_node(B)
 Cn = player_node.Player_node(C)
 
-print(An)
-
-print(Bn)
-
-print(Cn)
-
 
 List = player_list.PlayerList()
 List.insert_node(An)
+#print(List.get_tail.key)
+
 List.insert_node(Bn)
 List.insert_node(Cn)
-
-print(List.get_head())
+List.display()
+List.display(forward=0)
+'''
+print(List.get_tail.key)
+List.insert_at_tail(Cn)
+print(List.get_tail.key)
+List.delete_tail()
+print(List.get_tail.key)
+'''
