@@ -8,6 +8,7 @@ class player:
         self.__uid = uid
         self.__name = name
         self.__pword = None
+        self.__score = None
 
 
     @property #getter methodology for calling the private attribute
@@ -24,6 +25,12 @@ class player:
             return True
         elif self.__pword is None:
             return False
+    
+    @property
+    def score(self):
+        return self.__score
+    
+
 
     
     def __str__(self):
@@ -34,3 +41,9 @@ class player:
     
     def verify_password(self, pword_try):
         return argon2.PasswordHasher().verify(self.__pword, pword_try)
+
+    def set_score(self, score):
+        self.__score = score
+    
+    
+
