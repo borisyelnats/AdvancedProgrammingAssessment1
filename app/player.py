@@ -1,7 +1,7 @@
 
 import argon2
 
-argon2.PasswordHasher()
+
 class player:
 
     def __init__(self, uid, name):
