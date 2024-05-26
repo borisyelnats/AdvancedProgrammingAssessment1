@@ -20,7 +20,7 @@ def scoresort(array, AscendingOrder=True):
         for index, player in enumerate(array):
             if index == pivot_index:
                 continue
-            if (player.score <=pivot.score) == AscendingOrder:
+            if (player <= pivot) == AscendingOrder:
                 left.append(player)
             
             else:
