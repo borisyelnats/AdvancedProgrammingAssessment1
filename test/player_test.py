@@ -29,6 +29,21 @@ class player_test(unittest.TestCase):
         person.add_password(password)
         self.assertTrue(person.verify_password(password))
 
+    def test_ge(self):
+        person1 = player(1, "a")
+        person2 = player(0, "b")
+        person1.set_score(5)
+        person2.set_score(4)
+        self.assertTrue(person1 >= person2)
+
+    def test_eq(self):
+        person1 = player(1, "a")
+        person2 = player(1, "b")
+        person1.set_score(4)
+        person2.set_score(4)
+        self.assertTrue(person1 == person2)
+
+
 
     
     
