@@ -2,6 +2,9 @@ from player import player
 from player_bnode import PlayerBNode
 
 class PlayerBST:
+    '''
+    instantiating this Binary Search Tree requires no inputs
+    '''
     
     def __init__(self):
         self.__root = None
@@ -54,6 +57,36 @@ class PlayerBST:
                 node.right = PlayerBNode(player)
                 return
             else:
-                self.recursive_insert_player_node(node.left, player)
+                self.recursive_insert_player_node(node.right, player)
         elif player.name == node.name:
             node = PlayerBNode(player)
+    
+    def search(self, player):
+        name = player.name
+        if self.root.name == name:
+            return name
+        else:
+            searching = self.search_recursive(self.root, name)
+            return searching
+
+    def search_recursive(self, node, name):
+        if name < node.name:
+
+            if node.left == None:
+                return None
+            elif name == node.left.name:
+                return node.left
+            else:
+                searching = self.search_recursive(node.left, name)
+                return searching
+
+        if name > node.name:
+
+            if node.right == None:
+                return None
+            elif name == node.right.name:
+                return node.right
+            else:
+                searching = self.search_recursive(node.right, name)
+                return searching
+        

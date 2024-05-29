@@ -12,14 +12,17 @@ c = (player(1,"C"))
 d = (player(1,"D"))
 e = (player(1,"E"))
 f = (player(1,"F"))
-
+g = (player(1,"G"))
 
 
 bst.insert(c)
 bst.insert(f)
 bst.insert(a)
-bst.insert(c)
+bst.insert(b)
+bst.insert(f)
+bst.insert(e)
+bst.insert(d)
 
-print(bst.root)
-print(bst.root.left)
-print(bst.root.right)
+print(bst.search(g))
+
+
