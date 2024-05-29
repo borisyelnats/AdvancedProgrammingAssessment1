@@ -6,7 +6,11 @@ class PlayerBNode:
         self.__player = player
         self.__name = player.name
         self.__left = None
-        self.__left = None
+        self.__right = None
+
+    def __repr__(self):
+        return f'Name: {self.name}'
+
 
     @property
     def player(self): 

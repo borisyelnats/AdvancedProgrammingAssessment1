@@ -1,14 +1,25 @@
-import player_bst
+
+from player import player
+from player_bst import PlayerBST
 from player_bnode import PlayerBNode
-import player
 
-A = player.player(1, "Aaron")
-B = player.player(2, "Ben")
+# Create the BST instance
+bst = PlayerBST()
 
-An = PlayerBNode(A)
-Bn = PlayerBNode(B)
+a = (player(1,"A"))
+b = (player(1,"B"))
+c = (player(1,"C"))
+d = (player(1,"D"))
+e = (player(1,"E"))
+f = (player(1,"F"))
 
-BST = player_bst
-BST.insert_player_node(A)
 
 
+bst.insert(c)
+bst.insert(f)
+bst.insert(a)
+bst.insert(c)
+
+print(bst.root)
+print(bst.root.left)
+print(bst.root.right)
