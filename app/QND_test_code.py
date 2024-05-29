@@ -7,7 +7,7 @@ from player_bnode import PlayerBNode
 bst = PlayerBST()
 
 a = (player(1,"A"))
-b = (player(1,"B"))
+b = (player(1,"F"))
 c = (player(1,"C"))
 d = (player(1,"D"))
 e = (player(1,"E"))
@@ -23,6 +23,6 @@ bst.insert(f)
 bst.insert(e)
 bst.insert(d)
 
-print(bst.search(g))
+print(bst.search(e))
 
 

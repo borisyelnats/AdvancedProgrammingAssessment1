@@ -53,6 +53,30 @@ class player_bst_test(unittest.TestCase):
         bst.insert(b)
         self.assertGreater(bst.root.right.name, bst.root.name)
 
+    def test_bst_search(self):
+        bst = PlayerBST()
+
+        a = (player(1,"A"))
+        b = (player(1,"F"))
+        c = (player(1,"C"))
+        d = (player(1,"D"))
+        e = (player(1,"E"))
+        f = (player(1,"F"))
+        g = (player(1,"G"))
+
+
+        bst.insert(c)
+        bst.insert(f)
+        bst.insert(a)
+        bst.insert(b)
+        bst.insert(f)
+        bst.insert(e)
+        bst.insert(d)
+
+        self.assertEqual(bst.search(c),"C") #finds root
+        self.assertEqual(bst.search(f).name,"F") #finds branched value
+        self.assertIsNone(bst.search(g)) # searches for a node that is not in tree, should return none
+
     
     
     
