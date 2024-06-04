@@ -8,6 +8,19 @@ class PlayerBNode:
         self.__left = None
         self.__right = None
 
+    def __ge__(self, x):
+        if self.name >= x.name:
+            return True
+        else:
+            return False
+        
+    def __eq__(self, x):
+        if self.name == x.name:
+            return True
+        else:
+            return False
+
+
     def __repr__(self):
         return f'Name: {self.name}'
 
