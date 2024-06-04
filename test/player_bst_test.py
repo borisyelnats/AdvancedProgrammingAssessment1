@@ -5,7 +5,7 @@ from app.player import player
 from app.player_bnode import PlayerBNode
 from app.player_bst import PlayerBST
 
-#to run: python -m unittest player_bst_test.py
+#to run: python -m unittest player_bst_test
 
 class player_bst_test(unittest.TestCase):
     
